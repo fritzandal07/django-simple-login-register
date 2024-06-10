@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="topleft"><h1>Login</h1></div>
+<div class="main">  	
+
+<form method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">Submit</button>
+<a class="register-link" href="{% url 'base_page:register_view' %}">Register</a>
+
+</form>
+</div>
+{% endblock content %}

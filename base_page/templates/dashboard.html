@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<form class="logout" action="{% url 'base_page:logout' %}" method="post">
+    {% csrf_token %}
+    
+    <div class="topleft"><h1>Welcome to your dashboard {{ request.user.first_name }} {{ request.user.last_name }}!</h1></div>
+
+    <div class="card">
+        First Name: <h2>{{ request.user.first_name }}</h2>
+        Last Name: <h2>{{ request.user.last_name }}</h2>
+        Email <h2> {{ request.user.email }}</h2>
+      </div>
+        <button class="logout-link">Logout</button>
+</form>
+
+{% endblock content %}
