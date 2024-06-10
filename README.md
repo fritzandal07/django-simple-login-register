@@ -28,5 +28,7 @@ Simple django register and login authentication for demo
 > pipenv shell # install dependencies
 
 > python manage.py makemigrations
+
 > python manage.py migrate
+
 > python manage.py runserver
