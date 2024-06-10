@@ -45,4 +45,5 @@ def logout_view(request):
     if request.method == "POST":
         logout(request)
         return redirect("base_page:login_view")
-        
+    
+    return redirect("base_page:dashboard")
